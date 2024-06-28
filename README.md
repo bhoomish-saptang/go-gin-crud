@@ -18,7 +18,19 @@
 
 2. /authUserLogin - POST method - to authenticate username and password is valid or not(password decrypt by bcrypt)
 
+JSON body of user details:
+    {
+        "id": "90",
+        "name": "Prabhu",
+        "place": "pollachi",
+        "age": 23
+    }
 
+JSON body of Auth user:
+{
+    "username":"gopal",
+    "password":"stringOfGopal"
+}
 
 All the entire data stored in mongo DB with two different collection(userDetails and AuthenticationUserDetails) in database(data-gin as db name) mongoDB default port.
 
