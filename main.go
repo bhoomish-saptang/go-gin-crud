@@ -8,16 +8,18 @@ import (
 	"github.com/go-gin/config"
 	"github.com/go-gin/crud"
 	"github.com/go-gin/database"
+	"github.com/go-gin/logger"
 )
 
 func init() {
+	logger.InitLogger()
 	config.SetEnvironmentVariables()
 	database.ConnectMongodb()
 }
 func main() {
+	logger.Log.Println("Your server is ready")
 
 	route := gin.Default()
-
 	//userDetails CRUD API endpoints
 	route.POST("/createUserDetails", crud.PostUserDetails)
 	route.GET("/getAllUserDetails", crud.GetAllUserDetails)

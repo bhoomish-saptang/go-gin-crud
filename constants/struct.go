@@ -3,10 +3,10 @@ package constants
 import "time"
 
 type User struct {
-	ID    string `json:"id"`
-	Name  string `json:"name"`
-	Place string `json:"place"`
-	Age   int64  `json:"age"`
+	ID    string `json:"id" validate:"required,min=1,max=1000"`
+	Name  string `json:"name" binding:"required"`
+	Place string `json:"place" binding:"required"`
+	Age   int64  `json:"age" binding:"required"`
 }
 
 type AuthInput struct {
