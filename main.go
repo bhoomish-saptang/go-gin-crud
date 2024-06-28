@@ -9,6 +9,7 @@ import (
 	"github.com/go-gin/crud"
 	"github.com/go-gin/database"
 	"github.com/go-gin/logger"
+	"github.com/go-gin/middleware"
 )
 
 func init() {
@@ -30,6 +31,7 @@ func main() {
 	//Authenticaton Endpoints
 	route.POST("/createAuthUser", authentication.CreateUser)
 	route.POST("/authUserLogin", authentication.AuthUserLogin)
+	route.GET("/getAuthUser", middleware.CheckAuth, crud.GetAuthUser)
 	route.Run(os.Getenv("PORT"))
 
 }

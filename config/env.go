@@ -12,4 +12,5 @@ func SetEnvironmentVariables() {
 	os.Setenv("COLLECTION_NAME", "userDetails")
 	os.Setenv("COLLECTION_NAME_AUTH", "AuthenticationUserDetails")
 	os.Setenv("PORT", "localhost:8008")
+	os.Setenv("SECRET", "api-key-auth-user")
 }
