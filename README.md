@@ -16,7 +16,10 @@
 
 1. /createAuthUser - POST method - to create authenticate username and password(password encrypted with bcrypt)
 
-2. /authUserLogin - POST method - to authenticate username and password is valid or not(password decrypt by bcrypt)
+2. /authUserLogin - POST method - to authenticate username and password is valid or not(password decrypt by bcrypt) and return jwt token
+
+3. /getAuthUser - GET method - to access a Auth user data using bearer token in authentication header(exp time of token is 2 minutes)
+
 
 JSON body of user details:
  Example:   {
