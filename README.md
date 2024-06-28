@@ -19,7 +19,7 @@
 2. /authUserLogin - POST method - to authenticate username and password is valid or not(password decrypt by bcrypt)
 
 JSON body of user details:
-    {
+ Example:   {
         "id": "90",
         "name": "Prabhu",
         "place": "pollachi",
@@ -27,7 +27,7 @@ JSON body of user details:
     }
 
 JSON body of Auth user:
-{
+Example: {
     "username":"gopal",
     "password":"stringOfGopal"
 }
